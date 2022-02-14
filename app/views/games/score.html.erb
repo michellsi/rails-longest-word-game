@@ -1,0 +1,13 @@
+<h1>Result</h1>
+
+<p> This was your word: <%= @word %> </p>
+
+<p> These were the letters: <%= @letters.join %> </p>
+
+
+<%= @included ? "This is a valid word" : "This is not a valid word"  %>
+
+
+<p> <%= @valid_word ? "This is an english word" : "This is not an english word" %></p>
+
+<%= @included && @valid_word ? "Congrats!" : "Buuuh"  %>

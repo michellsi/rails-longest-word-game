@@ -1,0 +1,15 @@
+
+<div class="container">
+<% @letters.each do |letter| %>
+    <div class="cards"><%= letter.capitalize %> </div>
+<% end %>
+</div>
+
+<br><br>
+
+<form action="/score" method="post">
+<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+<%= hidden_field_tag :letters, @letters %>
+<input type="text" name="word" placeholder="Type in the longest word!">
+<input type="submit" value="Submit">
+</form>
